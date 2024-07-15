@@ -14,7 +14,7 @@ const app = express();
 connectDB();
 
 // MIDDLEWARE
-app.use(cors({ origin: "https://real-estate-react-app-phi.vercel.app", credentials: true }));
+app.use(cors())
 app.use(bodyParser.json());
 app.use(cookieParser());
 
