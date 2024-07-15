@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const authRoutes = require('./routes/auth');
 const propertyRoutes = require('./routes/properties');
+const home = require("./routes/home")
 require('dotenv').config();
 
 const app = express();
@@ -19,6 +20,8 @@ app.use(cookieParser());
 
 
 // ROUTES
+
+app.use("/", home)
 app.use('/api/auth', authRoutes);
 app.use('/api/properties', propertyRoutes);
 
