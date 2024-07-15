@@ -20,7 +20,6 @@ app.use(cookieParser());
 
 
 // ROUTES
-
 app.use("/", home)
 app.use('/api/auth', authRoutes);
 app.use('/api/properties', propertyRoutes);
