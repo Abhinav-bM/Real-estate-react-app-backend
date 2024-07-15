@@ -14,15 +14,11 @@ const app = express();
 connectDB();
 
 // MIDDLEWARE
-app.use(cors());
-const corsOptions = {
-  origin: 'https://real-estate-react-app-phi.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204
-};
+app.use(cors({
+    origin: 'https://real-estate-react-app-phi.vercel.app',
+    credentials: true,
+}));
 
-app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
