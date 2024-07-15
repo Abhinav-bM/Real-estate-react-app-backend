@@ -15,13 +15,12 @@ connectDB();
 
 // MIDDLEWARE
 app.use(cors({
-    origin: 'https://real-estate-react-app-phi.vercel.app',
+    origin: 'https://real-estate-react-app-frontend.vercel.app',
     credentials: true,
 }));
 
 app.use(bodyParser.json());
 app.use(cookieParser());
-
 
 // ROUTES
 app.use("/", home)
