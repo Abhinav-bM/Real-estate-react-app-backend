@@ -13,6 +13,8 @@ const app = express();
 // CONNECT TO DB
 connectDB();
 
+
+
 // MIDDLEWARE
 app.use(cors({
     origin: 'https://real-estate-react-app-frontend.vercel.app',
